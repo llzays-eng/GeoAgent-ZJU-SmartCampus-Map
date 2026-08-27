@@ -1,0 +1,389 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07218, 30.30791] },
+      "properties": {
+        "id": "poi_001",
+        "name": "北教学区",
+        "category": "teaching",
+        "audience": "student",
+        "open_time": "unknown",
+        "description": "紫金港校区北部教学区，包含多栋教学楼"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07085, 30.30840] },
+      "properties": {
+        "id": "poi_002",
+        "name": "银泉食堂",
+        "category": "canteen",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "北教学区附近食堂，提供餐饮服务"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.06817, 30.30226] },
+      "properties": {
+        "id": "poi_003",
+        "name": "玉湖餐厅",
+        "category": "canteen",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "校园西侧餐厅，临近玉湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.06826, 30.30180] },
+      "properties": {
+        "id": "poi_004",
+        "name": "尧坤楼",
+        "category": "teaching",
+        "audience": "student",
+        "open_time": "unknown",
+        "description": "行政办公及学生服务综合楼"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.06780, 30.30026] },
+      "properties": {
+        "id": "poi_005",
+        "name": "方闻图书馆",
+        "category": "library",
+        "audience": "both",
+        "open_time": "08:30-22:30",
+        "description": "西区图书馆，馆藏丰富，环境安静"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.06675, 30.29990] },
+      "properties": {
+        "id": "poi_006",
+        "name": "艺博馆",
+        "category": "museum",
+        "audience": "both",
+        "open_time": "09:00-17:00",
+        "description": "校园艺术与博物馆，举办各类展览"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07486, 30.29960] },
+      "properties": {
+        "id": "poi_007",
+        "name": "人文古籍图书馆",
+        "category": "library",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "收藏人文社科及古籍文献的专业图书馆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07689, 30.29848] },
+      "properties": {
+        "id": "poi_008",
+        "name": "南大门",
+        "category": "service",
+        "audience": "both",
+        "open_time": "06:00-23:00",
+        "description": "紫金港校区正南门，主入口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08404, 30.29772] },
+      "properties": {
+        "id": "poi_009",
+        "name": "交叉中心食堂",
+        "category": "canteen",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "交叉研究中心附近食堂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08574, 30.30053] },
+      "properties": {
+        "id": "poi_010",
+        "name": "菜鸟驿站",
+        "category": "service",
+        "audience": "student",
+        "open_time": "unknown",
+        "description": "校园快递收发服务点"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08558, 30.30318] },
+      "properties": {
+        "id": "poi_011",
+        "name": "东教学区",
+        "category": "teaching",
+        "audience": "student",
+        "open_time": "unknown",
+        "description": "东侧教学区，包含多栋教学楼"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08475, 30.30796] },
+      "properties": {
+        "id": "poi_012",
+        "name": "羽毛球馆",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "室内羽毛球场"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08559, 30.30902] },
+      "properties": {
+        "id": "poi_013",
+        "name": "风雨操场",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "室内综合体育场馆，可进行多种体育活动"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08588, 30.30956] },
+      "properties": {
+        "id": "poi_014",
+        "name": "篮球馆",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "室内篮球场馆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08467, 30.30925] },
+      "properties": {
+        "id": "poi_015",
+        "name": "游泳馆",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "室内恒温游泳池"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08145, 30.31118] },
+      "properties": {
+        "id": "poi_016",
+        "name": "白沙邮局",
+        "category": "service",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "校园邮政服务点"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07850, 30.30845] },
+      "properties": {
+        "id": "poi_017",
+        "name": "东操场",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "东侧田径运动场"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07760, 30.30792] },
+      "properties": {
+        "id": "poi_018",
+        "name": "西操场",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "西侧田径运动场"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07861, 30.30883] },
+      "properties": {
+        "id": "poi_019",
+        "name": "东篮球场",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "东侧室外篮球场地"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07834, 30.30603] },
+      "properties": {
+        "id": "poi_020",
+        "name": "安中球场",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "安中大楼附近的运动球场"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07606, 30.30473] },
+      "properties": {
+        "id": "poi_021",
+        "name": "主图书馆",
+        "category": "library",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "紫金港校区主图书馆，核心学习场所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07480, 30.30473] },
+      "properties": {
+        "id": "poi_022",
+        "name": "求是大讲堂",
+        "category": "teaching",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "举办大型讲座和学术活动的重要场所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.07440, 30.30437] },
+      "properties": {
+        "id": "poi_023",
+        "name": "党建馆",
+        "category": "museum",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "党建宣传教育展览馆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08060, 30.30507] },
+      "properties": {
+        "id": "poi_024",
+        "name": "西教学区",
+        "category": "teaching",
+        "audience": "student",
+        "open_time": "unknown",
+        "description": "西侧教学区，包含多栋教学楼"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08126, 30.30049] },
+      "properties": {
+        "id": "poi_025",
+        "name": "南华园",
+        "category": "scenic",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "校园南侧园林景观区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08185, 30.30071] },
+      "properties": {
+        "id": "poi_026",
+        "name": "大草坪",
+        "category": "scenic",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "校园中心大型草坪，休闲放松的好去处"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08427, 30.30730] },
+      "properties": {
+        "id": "poi_027",
+        "name": "基础图书馆",
+        "category": "library",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "东区基础图书馆，自习与借阅一体"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08303, 30.30703] },
+      "properties": {
+        "id": "poi_028",
+        "name": "阳明桥",
+        "category": "scenic",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "连接东西区的景观桥，启真湖畔标志性地点"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08175, 30.30718] },
+      "properties": {
+        "id": "poi_029",
+        "name": "月牙楼",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "月牙形建筑，校园地标之一"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08158, 30.30648] },
+      "properties": {
+        "id": "poi_030",
+        "name": "紫金港剧场",
+        "category": "other",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "校园文艺演出和大型活动场所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08123, 30.30896] },
+      "properties": {
+        "id": "poi_031",
+        "name": "校友林",
+        "category": "scenic",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "校友捐赠种植的纪念林区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [120.08024, 30.31095] },
+      "properties": {
+        "id": "poi_032",
+        "name": "东区大食堂",
+        "category": "canteen",
+        "audience": "both",
+        "open_time": "unknown",
+        "description": "东区大型食堂，多层供餐"
+      }
+    }
+  ]
+}

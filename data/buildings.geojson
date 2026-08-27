@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [120.0862, 30.3044],
+            [120.0872, 30.3044],
+            [120.0872, 30.3050],
+            [120.0862, 30.3050],
+            [120.0862, 30.3044]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bld_demo_001",
+        "name": "图书馆基础馆示意轮廓",
+        "type": "library",
+        "height": 24,
+        "floors": 6,
+        "description": "演示用虚假建筑轮廓，可用于 GeoServer 或 Cesium 展示。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [120.0844, 30.3058],
+            [120.0852, 30.3058],
+            [120.0852, 30.3064],
+            [120.0844, 30.3064],
+            [120.0844, 30.3058]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bld_demo_002",
+        "name": "东教学楼示意轮廓",
+        "type": "teaching",
+        "height": 18,
+        "floors": 5,
+        "description": "演示用虚假建筑轮廓，可用于教学楼展示。"
+      }
+    }
+  ]
+}

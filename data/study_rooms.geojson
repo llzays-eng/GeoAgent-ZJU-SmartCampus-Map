@@ -1,0 +1,1445 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0837020,
+          30.3061194
+        ]
+      },
+      "properties": {
+        "id": "study_001",
+        "name": "基础图书馆",
+        "building": "基础图书馆",
+        "floor": "1",
+        "room": "",
+        "type": "library",
+        "open_time": "8:00",
+        "close_time": "22:30",
+        "seat_total": 160,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "东区核心图书馆一楼书库"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0837020,
+          30.3061194
+        ]
+      },
+      "properties": {
+        "id": "study_002",
+        "name": "基础图书馆",
+        "building": "基础图书馆",
+        "floor": "2",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 160,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": true,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "东区核心图书馆二楼书库"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0837020,
+          30.3061194
+        ]
+      },
+      "properties": {
+        "id": "study_003",
+        "name": "基础图书馆",
+        "building": "基础图书馆",
+        "floor": "3",
+        "room": "",
+        "type": "library",
+        "open_time": "10:00",
+        "close_time": "22:30",
+        "seat_total": 132,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "东区核心图书馆三层信息共享空间"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0756090,
+          30.3053370
+        ]
+      },
+      "properties": {
+        "id": "study_004",
+        "name": "主图书馆一楼",
+        "building": "主图书馆",
+        "floor": "1",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 50,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港主图书馆一层，含餐饮休闲区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0756090,
+          30.3053370
+        ]
+      },
+      "properties": {
+        "id": "study_005",
+        "name": "主图书馆二楼",
+        "building": "主图书馆",
+        "floor": "2",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 208,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港主图书馆二楼，分南北自习区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0756090,
+          30.3053370
+        ]
+      },
+      "properties": {
+        "id": "study_006",
+        "name": "主图书馆三楼",
+        "building": "主图书馆",
+        "floor": "3",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 160,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港主图书馆三楼，分东、南、北自习区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0756090,
+          30.3053370
+        ]
+      },
+      "properties": {
+        "id": "study_007",
+        "name": "主图书馆四楼",
+        "building": "主图书馆",
+        "floor": "4",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 480,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港主图书馆四楼，分东、南、西、北自习区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0756090,
+          30.3053370
+        ]
+      },
+      "properties": {
+        "id": "study_008",
+        "name": "主图书馆五楼",
+        "building": "主图书馆",
+        "floor": "5",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 64,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港主图书馆五楼东区自习区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0756090,
+          30.3053370
+        ]
+      },
+      "properties": {
+        "id": "study_009",
+        "name": "主图书馆六楼",
+        "building": "主图书馆",
+        "floor": "6",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 120,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港主图书馆六楼自习区"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0672591,
+          30.3002522
+        ]
+      },
+      "properties": {
+        "id": "study_010",
+        "name": "方闻图书馆",
+        "building": "方闻图书馆",
+        "floor": "2",
+        "room": "",
+        "type": "library",
+        "open_time": "8:30",
+        "close_time": "22:30",
+        "seat_total": 256,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "西区图书馆，艺术与人文类藏书丰富"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0746309,
+          30.3002539
+        ]
+      },
+      "properties": {
+        "id": "study_011",
+        "name": "人文古籍图书馆",
+        "building": "古籍馆",
+        "floor": "/",
+        "room": "",
+        "type": "library",
+        "open_time": "9:00",
+        "close_time": "17:00",
+        "seat_total": 512,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "古籍特藏与人文社科阅览室"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0842456,
+          30.3046489
+        ]
+      },
+      "properties": {
+        "id": "study_012",
+        "name": "东教1-B，1楼自习室",
+        "building": "东一教学楼",
+        "floor": "1",
+        "room": "",
+        "type": "classroom",
+        "open_time": "7:00",
+        "close_time": "23:00",
+        "seat_total": 300,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "小教室，有格挡，座位宽敞"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0720024,
+          30.3069711
+        ]
+      },
+      "properties": {
+        "id": "study_013",
+        "name": "北教学楼1号楼一楼自习区",
+        "building": "北一教学楼",
+        "floor": "1",
+        "room": "",
+        "type": "classroom",
+        "open_time": "7:00",
+        "close_time": "22:30",
+        "seat_total": 160,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "教室自习区，插座较多"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0807673,
+          30.3051879
+        ]
+      },
+      "properties": {
+        "id": "study_014",
+        "name": "西教学区连廊自习区",
+        "building": "西教学楼",
+        "floor": "/",
+        "room": "",
+        "type": "public",
+        "open_time": "7:00",
+        "close_time": "22:00",
+        "seat_total": 50,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "安静连廊，适合静读，座位较硬"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0706022,
+          30.3081836
+        ]
+      },
+      "properties": {
+        "id": "study_015",
+        "name": "星巴克（浙大银泉店）",
+        "building": "星巴克",
+        "floor": "1",
+        "room": "",
+        "type": "cafe",
+        "open_time": "7:30",
+        "close_time": "22:00",
+        "seat_total": 30,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "校内商业街附近，适合小组讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0814640,
+          30.3103702
+        ]
+      },
+      "properties": {
+        "id": "study_016",
+        "name": "瑞幸咖啡（白沙综合楼店）",
+        "building": "白沙综合楼",
+        "floor": "2",
+        "room": "",
+        "type": "cafe",
+        "open_time": "8:00",
+        "close_time": "21:00",
+        "seat_total": 46,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "人来人往，适合小组讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0900403,
+          30.3060622
+        ]
+      },
+      "properties": {
+        "id": "study_017",
+        "name": "北街咖啡",
+        "building": "北街商业街",
+        "floor": "1",
+        "room": "",
+        "type": "cafe",
+        "open_time": "0:00",
+        "close_time": "0:00",
+        "seat_total": 20,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": true,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "北街刷夜自习空间，消费自习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0677469,
+          30.3018139
+        ]
+      },
+      "properties": {
+        "id": "study_018",
+        "name": "尧坤楼自习区",
+        "building": "尧坤楼",
+        "floor": "/",
+        "room": "",
+        "type": "public",
+        "open_time": "8:00",
+        "close_time": "22:00",
+        "seat_total": 120,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "行政楼内开放自习区域"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0817527,
+          30.3074609
+        ]
+      },
+      "properties": {
+        "id": "study_019",
+        "name": "月牙楼地下一层自习室",
+        "building": "月牙楼",
+        "floor": "B1",
+        "room": "",
+        "type": "public",
+        "open_time": "7:00",
+        "close_time": "23:30",
+        "seat_total": 50,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "地标建筑内自习室"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0790359,
+          30.3039681
+        ]
+      },
+      "properties": {
+        "id": "study_020",
+        "name": "安中大楼自习区",
+        "building": "安中大楼",
+        "floor": "2",
+        "room": "",
+        "type": "public",
+        "open_time": "8:00",
+        "close_time": "22:00",
+        "seat_total": 100,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "建筑学院附近安静区域"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0800784,
+          30.3111066
+        ]
+      },
+      "properties": {
+        "id": "study_021",
+        "name": "全家便利店（丹青店）",
+        "building": "全家便利店",
+        "floor": "1",
+        "room": "",
+        "type": "public",
+        "open_time": "0:00",
+        "close_time": "0:00",
+        "seat_total": 7,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": true,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "24小时便利店，少量座位"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0842456,
+          30.3046489
+        ]
+      },
+      "properties": {
+        "id": "study_022",
+        "name": "东教启真湖畔户外自习区",
+        "building": "东一教学楼",
+        "floor": "1",
+        "room": "",
+        "type": "public",
+        "open_time": "0:00",
+        "close_time": "0:00",
+        "seat_total": 0,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "户外桌椅，适合天气好时学习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0843279,
+          30.3035801
+        ]
+      },
+      "properties": {
+        "id": "study_023",
+        "name": "麦斯威咖啡（东二教学楼）",
+        "building": "东二教学楼",
+        "floor": "1+2",
+        "room": "",
+        "type": "cafe",
+        "open_time": "8:00",
+        "close_time": "21:30",
+        "seat_total": 30,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "校内咖啡简餐，靠近基础图书馆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0801253,
+          30.3117806
+        ]
+      },
+      "properties": {
+        "id": "study_024",
+        "name": "麦斯威咖啡（青溪点）",
+        "building": "青溪学园",
+        "floor": "1",
+        "room": "",
+        "type": "cafe",
+        "open_time": "9:00",
+        "close_time": "22:00",
+        "seat_total": 20,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区内安静咖啡吧"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0770711,
+          30.3115968
+        ]
+      },
+      "properties": {
+        "id": "study_025",
+        "name": "蓝田自习室",
+        "building": "蓝田学园",
+        "floor": "1",
+        "room": "",
+        "type": "study_room",
+        "open_time": "7:00",
+        "close_time": "23:00",
+        "seat_total": 60,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区内自习室，方便住宿学生"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0780357,
+          30.3101785
+        ]
+      },
+      "properties": {
+        "id": "study_026",
+        "name": "紫云自习室",
+        "building": "紫云学园",
+        "floor": "1",
+        "room": "",
+        "type": "study_room",
+        "open_time": "7:00",
+        "close_time": "23:00",
+        "seat_total": 60,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区内自习室"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0814640,
+          30.3103702
+        ]
+      },
+      "properties": {
+        "id": "study_027",
+        "name": "白沙综合楼自习区",
+        "building": "白沙综合楼",
+        "floor": "1+2",
+        "room": "",
+        "type": "study_room",
+        "open_time": "8:00",
+        "close_time": "22:30",
+        "seat_total": 30,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "白沙邮局楼上，安静"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0815342,
+          30.3109950
+        ]
+      },
+      "properties": {
+        "id": "study_032",
+        "name": "白沙学园1号楼自习区",
+        "building": "白沙学园1号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 40,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0815396,
+          30.3106413
+        ]
+      },
+      "properties": {
+        "id": "study_033",
+        "name": "白沙学园2号楼自习区",
+        "building": "白沙学园2号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 35,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0770773,
+          30.3097258
+        ]
+      },
+      "properties": {
+        "id": "study_034",
+        "name": "碧峰学园1号楼自习区",
+        "building": "碧峰学园1号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "8:00",
+        "close_time": "22:30",
+        "seat_total": 50,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0769697,
+          30.3102884
+        ]
+      },
+      "properties": {
+        "id": "study_035",
+        "name": "碧峰学园2号楼自习区",
+        "building": "碧峰学园2号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 45,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0794136,
+          30.3111307
+        ]
+      },
+      "properties": {
+        "id": "study_036",
+        "name": "丹阳学园1号楼自习区",
+        "building": "丹阳学园1号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 38,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0788963,
+          30.3116049
+        ]
+      },
+      "properties": {
+        "id": "study_037",
+        "name": "丹阳学园3号楼自习区",
+        "building": "丹阳学园3号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "8:00",
+        "close_time": "22:30",
+        "seat_total": 42,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0812685,
+          30.3113733
+        ]
+      },
+      "properties": {
+        "id": "study_042",
+        "name": "翠柏学园1号楼自习区",
+        "building": "翠柏学园1号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "7:00",
+        "close_time": "22:30",
+        "seat_total": 32,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0811364,
+          30.3117456
+        ]
+      },
+      "properties": {
+        "id": "study_043",
+        "name": "翠柏学园2号楼自习区",
+        "building": "翠柏学园2号楼自习区",
+        "floor": "1",
+        "room": "",
+        "type": "dormitory",
+        "open_time": "7:00",
+        "close_time": "22:30",
+        "seat_total": 30,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "宿舍区一楼，空间较小，可以讨论"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0817527,
+          30.3074609
+        ]
+      },
+      "properties": {
+        "id": "study_044",
+        "name": "月牙楼101自习室",
+        "building": "月牙楼",
+        "floor": "1",
+        "room": "",
+        "type": "classroom",
+        "open_time": "7:00",
+        "close_time": "22:00",
+        "seat_total": 60,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "月牙楼101教室，无课时作为公共自习室"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0817527,
+          30.3074609
+        ]
+      },
+      "properties": {
+        "id": "study_045",
+        "name": "月牙楼203自习室",
+        "building": "月牙楼",
+        "floor": "2",
+        "room": "",
+        "type": "classroom",
+        "open_time": "7:00",
+        "close_time": "22:30",
+        "seat_total": 55,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "月牙楼203教室，无课时开放自习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0817527,
+          30.3074609
+        ]
+      },
+      "properties": {
+        "id": "study_046",
+        "name": "月牙楼305自习室",
+        "building": "月牙楼",
+        "floor": "3",
+        "room": "",
+        "type": "classroom",
+        "open_time": "8:00",
+        "close_time": "22:00",
+        "seat_total": 50,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "月牙楼305教室，环境安静，适合自习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0841517,
+          30.3000061
+        ]
+      },
+      "properties": {
+        "id": "study_047",
+        "name": "纳米行政楼附属楼自习室",
+        "building": "行政楼附属楼",
+        "floor": "1",
+        "room": "",
+        "type": "office_building",
+        "open_time": "9:00",
+        "close_time": "21:00",
+        "seat_total": 30,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "行政楼附属楼一层公共自习空间"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0862654,
+          30.2990764
+        ]
+      },
+      "properties": {
+        "id": "study_048",
+        "name": "农生环大楼A102自习室",
+        "building": "农生环大楼",
+        "floor": "1",
+        "room": "",
+        "type": "department",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 45,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "农生环大楼A102公共自习室，适合相关专业学生"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0795693,
+          30.2984411
+        ]
+      },
+      "properties": {
+        "id": "study_049",
+        "name": "医学大楼B203自习室",
+        "building": "医学大楼",
+        "floor": "2",
+        "room": "",
+        "type": "department",
+        "open_time": "9:00",
+        "close_time": "21:30",
+        "seat_total": 40,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "医学大楼B203自习室，医学类书籍丰富"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0778160,
+          30.3020308
+        ]
+      },
+      "properties": {
+        "id": "study_050",
+        "name": "工科试验班大楼C301自习室",
+        "building": "工科试验班大楼",
+        "floor": "3",
+        "room": "",
+        "type": "department",
+        "open_time": "7:00",
+        "close_time": "22:00",
+        "seat_total": 50,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "工科试验班大楼C301自习室，适合工科学生"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0753462,
+          30.3003986
+        ]
+      },
+      "properties": {
+        "id": "study_051",
+        "name": "人文社科大楼成均苑4幢",
+        "building": "文科大楼",
+        "floor": "1",
+        "room": "",
+        "type": "department",
+        "open_time": "9:00",
+        "close_time": "22:00",
+        "seat_total": 42,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "文科大楼D105自习室，人文社科氛围浓厚"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0787372,
+          30.3014042
+        ]
+      },
+      "properties": {
+        "id": "study_052",
+        "name": "周厚复化学实验中心自习室",
+        "building": "化学实验楼",
+        "floor": "1",
+        "room": "",
+        "type": "department",
+        "open_time": "9:00",
+        "close_time": "22:30",
+        "seat_total": 35,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "化学实验楼F103自习室，靠近实验室"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0842870,
+          30.3015127
+        ]
+      },
+      "properties": {
+        "id": "study_053",
+        "name": "东四物理实验教学中心自习室",
+        "building": "物理实验楼",
+        "floor": "2",
+        "room": "",
+        "type": "department",
+        "open_time": "7:00",
+        "close_time": "22:30",
+        "seat_total": 32,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "物理实验楼G201自习室，适合理科学习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0810676,
+          30.3062610
+        ]
+      },
+      "properties": {
+        "id": "study_054",
+        "name": "紫金港剧场休息区",
+        "building": "紫金港剧场",
+        "floor": "1",
+        "room": "",
+        "type": "public_space",
+        "open_time": "9:00",
+        "close_time": "22:00",
+        "seat_total": 22,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "紫金港剧场大厅休息区，无演出时可自习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0840829,
+          30.3100530
+        ]
+      },
+      "properties": {
+        "id": "study_055",
+        "name": "东区游泳馆健身房自习区",
+        "building": "游泳馆",
+        "floor": "1",
+        "room": "",
+        "type": "public_space",
+        "open_time": "8:00",
+        "close_time": "21:30",
+        "seat_total": 25,
+        "seat_available": 0,
+        "has_power": false,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "一层自习区，运动后可学习，开放时间与运动场所一致，有钢琴，适合休闲自习"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0862781,
+          30.3048736
+        ]
+      },
+      "properties": {
+        "id": "study_056",
+        "name": "外国语学院东五102B自习室",
+        "building": "东五教学楼",
+        "floor": "1",
+        "room": "",
+        "type": "classroom",
+        "open_time": "0:00",
+        "close_time": "0:00",
+        "seat_total": 25,
+        "seat_available": 0,
+        "has_power": true,
+        "noise_level": "quiet",
+        "power_outlet_level": "unknown",
+        "group_study": false,
+        "overnight_available": false,
+        "nearby_facilities": [],
+        "tags": [],
+        "description": "可长时间存放个人物品，进出自由"
+      }
+    }
+  ]
+}

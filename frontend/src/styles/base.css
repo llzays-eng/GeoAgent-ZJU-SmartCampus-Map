@@ -1,0 +1,1474 @@
+/* ═══════════════════════════════════════════════════════
+   Zijingang Campus WebGIS — "Cartographic Modern"
+   Palette drawn from campus: brick, water, lichen, stone.
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* Token system */
+  --color-canvas:     #f9f7f4;
+  --color-shale:      #3b3a39;
+  --color-water:      #457b8c;
+  --color-lichen:     #6b8a5e;
+  --color-terracotta: #c2644f;
+  --color-frost:      #eae6df;
+
+  /* Semantic derivations */
+  --color-text:            #3b3a39;
+  --color-text-secondary:  #6f6d69;
+  --color-text-muted:      #999691;
+  --color-surface:         #ffffff;
+  --color-bg:              #f3f0eb;
+  --color-border:          #eae6df;
+  --color-border-light:    #f2efe9;
+
+  /* Data colors (muted, map-friendly) */
+  --color-study-room:        var(--color-water);
+  --color-study-room-bg:     #eaf2f5;
+  --color-study-room-border: #c5dbe4;
+  --color-poi:               var(--color-lichen);
+  --color-poi-bg:            #eaf1e6;
+  --color-poi-border:        #c8d9c2;
+  --color-charger:           #8b7355;
+  --color-charger-bg:        #f5f0e8;
+  --color-charger-border:    #e5dac8;
+
+  /* Semantic states */
+  --color-success:        #5b8c5a;
+  --color-success-bg:     #edf5eb;
+  --color-success-border: #c8e0c7;
+  --color-warning:        #b0823c;
+  --color-warning-bg:     #faf6ed;
+  --color-warning-border: #f0e3c8;
+  --color-error:          #b54a3f;
+  --color-error-bg:       #faf0ef;
+  --color-error-border:   #f0cecb;
+
+  /* Accent */
+  --color-accent:       var(--color-terracotta);
+  --color-accent-hover: #a85443;
+  --color-accent-light: #fdf1ed;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(59, 58, 57, 0.06);
+  --shadow-md: 0 4px 16px rgba(59, 58, 57, 0.08);
+  --shadow-lg: 0 8px 32px rgba(59, 58, 57, 0.1);
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Typography */
+  --font-display: Georgia, "Noto Serif CJK SC", serif;
+  --font-body:    Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────────── */
+
+* { box-sizing: border-box; }
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Shell ───────────────────────────────────────────── */
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* ── Side Panel ──────────────────────────────────────── */
+
+.side-panel {
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+  max-height: 100vh;
+  padding: 0;
+  background: var(--color-canvas);
+  border-right: none;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ═══ Signature: the red stripe ═══ */
+.side-panel::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--color-terracotta);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+/* ── Hero ────────────────────────────────────────────── */
+
+.panel-hero {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-shale);
+  letter-spacing: -0.01em;
+}
+
+.status-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.status-strip span {
+  min-width: 0;
+  padding: 6px 4px;
+  border: 1px solid var(--color-frost);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+
+.panel-section {
+  margin: 0;
+  padding: 12px 16px;
+}
+
+.panel-section + .panel-section {
+  border-top: 1px solid var(--color-border);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.section-kicker {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Tab Row ─────────────────────────────────────────── */
+
+.tab-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: var(--radius-md);
+  background: var(--color-border-light);
+}
+
+.tab-button {
+  min-height: 30px;
+  padding: 0 4px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab-button:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.tab-button.active {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Search ──────────────────────────────────────────── */
+
+.search-input {
+  width: 100%;
+  min-height: 34px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--color-water);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(69, 123, 140, 0.1);
+}
+
+/* ── AI Area ─────────────────────────────────────────── */
+
+.ai-area {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-study-room-border);
+  border-left: 3px solid var(--color-water);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.eyebrow.compact {
+  margin-bottom: 2px;
+  color: var(--color-water);
+}
+
+.ai-intro {
+  margin: 0 0 8px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.ai-form {
+  display: grid;
+  gap: 8px;
+}
+
+.ai-form textarea {
+  width: 100%;
+  min-height: 72px;
+  resize: vertical;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.ai-form textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.ai-form textarea:focus {
+  border-color: var(--color-water);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(69, 123, 140, 0.08);
+}
+
+.ai-message {
+  margin-top: 8px;
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+
+.primary-button,
+.secondary-button {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.primary-button {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+  box-shadow: 0 2px 8px rgba(194, 100, 79, 0.25);
+}
+
+.secondary-button {
+  justify-self: start;
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-water);
+}
+
+.secondary-button:hover {
+  background: var(--color-study-room-bg);
+  border-color: var(--color-study-room-border);
+}
+
+/* ── Recommendations ─────────────────────────────────── */
+
+.recommendation-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.recommendation-card {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-study-room-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.rec-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.recommendation-card h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+.recommendation-card p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* ── Place List ──────────────────────────────────────── */
+
+.scrollable-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.place-list {
+  display: grid;
+  gap: 5px;
+}
+
+.place-item {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  padding: 8px 10px 8px 12px;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, transform 0.12s;
+}
+
+.place-item:hover {
+  transform: translateX(2px);
+}
+
+.place-item:focus-visible {
+  outline: 2px solid var(--color-water);
+  outline-offset: 1px;
+}
+
+.place-item.study-room {
+  border-left-color: var(--color-study-room);
+}
+
+.place-item.study-room:hover {
+  border-color: var(--color-study-room-border);
+  background: var(--color-study-room-bg);
+}
+
+.place-item.poi {
+  border-left-color: var(--color-poi);
+}
+
+.place-item.poi:hover {
+  border-color: var(--color-poi-border);
+  background: var(--color-poi-bg);
+}
+
+.place-item.charger {
+  border-left-color: var(--color-charger);
+}
+
+.place-item.charger:hover {
+  border-color: var(--color-charger-border);
+  background: var(--color-charger-bg);
+}
+
+.place-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+.place-meta {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+.list-hint {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Charger Info ────────────────────────────────────── */
+
+.charger-info {
+  margin-bottom: 10px;
+}
+
+.charger-info .note {
+  margin-bottom: 6px;
+}
+
+/* ── Badges ──────────────────────────────────────────── */
+
+.count-badge,
+.availability-pill {
+  display: inline-grid;
+  min-width: 22px;
+  min-height: 20px;
+  place-items: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.count-badge {
+  background: var(--color-border-light);
+  color: var(--color-text-secondary);
+}
+
+.availability-pill {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+/* ── Empty state ─────────────────────────────────────── */
+
+.empty-state {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ── External link ───────────────────────────────────── */
+
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-water);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.external-link:hover {
+  background: var(--color-study-room-bg);
+  border-color: var(--color-study-room-border);
+}
+
+/* ── Screen-reader only ──────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Notes ───────────────────────────────────────────── */
+
+.note {
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.note.success {
+  border-color: var(--color-success-border);
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.note.warning {
+  border-color: var(--color-warning-border);
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.note.error {
+  border-color: var(--color-error-border);
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+/* ── Guardrail ───────────────────────────────────────── */
+
+.guardrail {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Legend ──────────────────────────────────────────── */
+
+.legend-compact {
+  padding-top: 10px;
+}
+
+.legend-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legend-toggle:hover {
+  color: var(--color-text);
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+  margin-top: 6px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  border: 1.5px solid;
+}
+
+/* ── Map area ────────────────────────────────────────── */
+
+.map-area {
+  position: relative;
+  min-width: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ── Map toolbar ─────────────────────────────────────── */
+
+.map-toolbar {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 28px);
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+}
+
+.map-toolbar strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.map-toolbar span,
+.toolbar-label {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+/* ── Map legend overlay ──────────────────────────────── */
+
+.map-legend-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 14px;
+  z-index: 500;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(6px);
+}
+
+.map-legend-overlay .legend-dot {
+  margin-right: 1px;
+}
+
+/* ── Leaflet overrides ───────────────────────────────── */
+
+.charger-name-tooltip {
+  border: 1px solid var(--color-text) !important;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.leaflet-container {
+  font: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.leaflet-popup-content strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    max-height: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .side-panel::before {
+    position: static;
+  }
+
+  .map-area,
+  .leaflet-map {
+    min-height: 460px;
+    height: 460px;
+  }
+}
+
+@media (max-width: 520px) {
+  .panel-hero {
+    padding: 12px;
+  }
+
+  .panel-section {
+    padding: 10px 12px;
+  }
+
+  h1 {
+    font-size: 17px;
+  }
+
+  .status-strip,
+  .legend-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-row {
+    gap: 3px;
+    padding: 3px;
+  }
+
+  .tab-button {
+    font-size: 11px;
+    min-height: 28px;
+  }
+
+  .map-toolbar {
+    right: 10px;
+    left: 10px;
+    flex-wrap: wrap;
+  }
+
+  .map-legend-overlay {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .scrollable-list {
+    max-height: 240px;
+  }
+}
+
+/* ── GeoServer section ───────────────────────────────── */
+
+.geoserver-section {
+  padding-top: 10px;
+}
+
+.geoserver-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.toggle-label input[type="checkbox"] {
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.geoserver-badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.geoserver-badge.on {
+  border: 1px solid var(--color-success-border);
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.geoserver-badge.off {
+  border: 1px solid var(--color-error-border);
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.geoserver-note {
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+/* ── View mode toggle (2D / 3D) ─────────────────────── */
+
+.view-mode-toggle {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.view-mode-btn {
+  padding: 4px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.view-mode-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.view-mode-btn.active {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+/* GeoAgent opens a different kind of view (not another basemap), so it gets
+   its own weight instead of blending into the 2D/3D pair. */
+.agent-mode-btn {
+  border-color: var(--color-water);
+  color: var(--color-water);
+  font-weight: 600;
+}
+
+.agent-mode-btn:hover {
+  background: var(--color-study-room-bg);
+  border-color: var(--color-water);
+  color: var(--color-water);
+}
+
+/* ── GeoAgent view ───────────────────────────────────── */
+
+.map-area > .agent-panel {
+  height: 100%;
+  min-height: 0;
+}
+
+/* ── Cesium container ────────────────────────────────── */
+
+.cesium-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* ── Cesium top bar ──────────────────────────────────── */
+
+.cesium-top-bar {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cesium-back-btn {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.cesium-back-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ── Basemap switcher ────────────────────────────────── */
+
+.cesium-basemap-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border: 1px solid rgba(190, 230, 255, 0.25);
+  border-radius: var(--radius-md);
+  background: rgba(10, 20, 34, 0.88);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(6px);
+}
+
+.basemap-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #61c8ff;
+  margin-right: 2px;
+}
+
+.basemap-btn {
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: #a0c8e8;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.basemap-btn:hover {
+  border-color: rgba(97, 200, 255, 0.5);
+}
+
+.basemap-btn.active {
+  border-color: #61c8ff;
+  background: rgba(97, 200, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ── Cesium overlay (loading / empty) ────────────────── */
+
+.cesium-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-width: 400px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-warning);
+  font-size: 13px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  line-height: 1.5;
+}
+
+/* ── Cesium summary badge ────────────────────────────── */
+
+.cesium-summary-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 14px;
+  z-index: 10;
+  padding: 6px 12px;
+  border: 1px solid rgba(190, 230, 255, 0.25);
+  border-radius: 6px;
+  background: rgba(10, 20, 34, 0.85);
+  color: #a0c8e8;
+  font-size: 11px;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(6px);
+  max-width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Cesium status toast ─────────────────────────────── */
+
+.cesium-status-toast {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 6px 16px;
+  border: 1px solid #f0e3c8;
+  border-radius: 6px;
+  background: rgba(250, 246, 237, 0.95);
+  color: #b0823c;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+/* ── Popup card system ──────────────────────────────── */
+
+.popup-card {
+  max-width: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.popup-card-header {
+  padding: 10px 14px;
+  color: #ffffff;
+}
+
+.popup-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.popup-card-subtitle {
+  margin-top: 2px;
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.popup-card-body {
+  padding: 12px 14px;
+  background: #ffffff;
+}
+
+.attr-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 12px;
+  font-size: 11px;
+}
+
+.attr-label {
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.attr-value {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.popup-card-desc {
+  padding: 8px 14px 10px;
+  border-top: 1px solid var(--color-border);
+  background: #ffffff;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* ── Custom marker icons ─────────────────────────────── */
+
+.custom-marker-icon {
+  background: transparent;
+  border: none;
+}
+
+/* Override Leaflet's default divIcon background */
+.leaflet-div-icon.custom-marker-icon {
+  background: transparent;
+  border: none;
+}
+
+/* ── Layer toggle ─────────────────────────────────────── */
+
+.layer-toggle {
+  display: flex;
+  gap: 3px;
+  margin-left: 8px;
+}
+
+.layer-btn {
+  padding: 3px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.layer-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.layer-btn.active {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ── Cluster icon ──────────────────────────────────────── */
+
+.custom-cluster-icon {
+  background: transparent;
+  border: none;
+}
+
+.cluster-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(194, 100, 79, 0.3);
+}
+
+.cluster-icon span {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-body);
+}
+
+/* ── Cesium InfoBox override ───────────────────────────── */
+
+.cesium-infobox-custom {
+  max-width: 260px;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.12);
+  background: transparent;
+}
+
+.cesium-infobox-custom .cesium-infoBox {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.cesium-infobox-custom .cesium-infoBox-title {
+  display: none;
+}
+
+.cesium-infobox-custom .cesium-infoBox-description {
+  padding: 0;
+  font-family: var(--font-body);
+}
+
+.cesium-infobox-custom .cesium-infoBox-close {
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+/* ── Cesium layer toggle dark theme ───────────────────── */
+
+.cesium-layer-toggle {
+  margin-left: 0;
+}
+
+.cesium-layer-toggle .layer-btn {
+  color: #a0c8e8;
+  border-color: rgba(97, 200, 255, 0.25);
+  background: rgba(10, 20, 34, 0.5);
+}
+
+.cesium-layer-toggle .layer-btn:hover {
+  color: #ffffff;
+  border-color: #61c8ff;
+}
+
+.cesium-layer-toggle .layer-btn.active {
+  color: #ffffff;
+  border-color: #61c8ff;
+  background: rgba(97, 200, 255, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════
+   Spatial Analysis Panel
+   ═══════════════════════════════════════════════════════ */
+
+.spatial-area {
+  padding: 0 0 8px;
+}
+
+/* Sub-mode tabs (缓冲区 / 最近 POI) */
+.spatial-mode-tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.spatial-tab {
+  flex: 1;
+  padding: 7px 6px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s, border-color 0.13s;
+}
+
+.spatial-tab:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.spatial-tab.active {
+  background: var(--color-water);
+  color: #fff;
+  border-color: var(--color-water);
+}
+
+/* Config area */
+.spatial-config {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.spatial-hint {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.spatial-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.spatial-select {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 12.5px;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.spatial-select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+/* Radius / limit button row */
+.radius-row {
+  display: flex;
+  gap: 4px;
+}
+
+.radius-btn {
+  flex: 1;
+  padding: 5px 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+
+.radius-btn:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.radius-btn.active {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Click-active state for the "点击地图" button */
+.spatial-click-active {
+  background: var(--color-water) !important;
+  border-color: var(--color-water) !important;
+  color: #fff !important;
+  animation: pulse-border 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(69, 123, 140, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(69, 123, 140, 0);  }
+}
+
+/* Status note */
+.spatial-note {
+  background: var(--color-study-room-bg);
+  color: var(--color-water);
+  border-color: var(--color-study-room-border);
+}
+
+/* Clear button */
+.spatial-clear-btn {
+  align-self: flex-start;
+  font-size: 11px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+}
+
+/* Results list */
+.spatial-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.spatial-result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.12s;
+}
+
+.spatial-result-card:hover {
+  border-color: var(--color-water);
+}
+
+.spatial-result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+/* Distance pill */
+.dist-badge {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--color-study-room-bg);
+  color: var(--color-water);
+  border-radius: 10px;
+  padding: 2px 7px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}

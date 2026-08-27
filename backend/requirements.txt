@@ -1,0 +1,35 @@
+# --- Original project dependencies ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-dotenv>=1.0.1
+httpx>=0.27.2
+
+# --- GeoAgent upgrade: core ---
+pydantic>=2.9.0
+shapely>=2.0.0            # STRtree spatial index (agent/spatial_index, geo_data.SpatialIndex)
+networkx>=3.0              # validates + exports the Agent Loop state machine (agent/state_machine.py)
+websockets>=12.0           # WS transport for /api/agent/ws live trace streaming
+aiosqlite>=0.20.0          # async-friendly long-term memory store (agent/memory/long_term.py uses sync sqlite3, kept for future async migration)
+
+# --- GeoAgent upgrade: LLM function calling ---
+openai>=1.50.0              # OpenAI-compatible client, pointed at DeepSeek's base_url for real function calling
+
+# --- GeoAgent upgrade: RAG ---
+jieba>=0.42.1                # Chinese tokenization for the TF-IDF embedding fallback (agent/rag/embedding.py)
+numpy>=1.26.0
+faiss-cpu>=1.8.0             # vector store (agent/rag/vector_store.py); falls back to a numpy brute-force store if unavailable
+# sentence-transformers>=3.0.0  # OPTIONAL: only needed if EMBEDDING_BACKEND=bge (real dense embeddings). Requires
+                               # internet access to download BAAI/bge-small-zh-v1.5 from Hugging Face on first use.
+                               # Commented out by default so a base install stays lightweight (TF-IDF needs nothing extra).
+
+# --- GeoAgent upgrade: charts ---
+matplotlib>=3.8.0
+
+# --- GeoAgent upgrade: OPTIONAL, only if NDVI_BACKEND=gee ---
+# earthengine-api>=1.0.0      # real Google Earth Engine backend for ndvi_trend; needs a GEE-registered
+                               # cloud project + service account credentials. Uncomment to enable.
+
+# --- GeoAgent upgrade: OPTIONAL, only for the Python<->Node MCP bridge demo (agent/tools/mcp_bridge.py) ---
+# mcp>=1.0.0                  # official Model Context Protocol Python SDK. Uncomment if you want the Python
+                               # orchestrator to call the Node geocode MCP server over the MCP protocol instead
+                               # of the in-process geocode tool. See mcp-server/README.md.
